@@ -23,6 +23,7 @@ function make_net(embeddings_path)
   local gazetteer_per_lookup_table = nn.LookupTable(10, 15):init('weight', nninit.uniform, -1.0, 1.0)
 
   local gaz_size = 15
+  local total_vec_size = embedding_dim + 5 + 30 + 4 * gaz_size
 
   local parallel_lookup = nn.ParallelTable()
   parallel_lookup:add(emb_lookup_table)

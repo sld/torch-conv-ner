@@ -147,7 +147,8 @@ local function get_data_and_labels_for_sent(file, numLines, batchedMode, keep_fe
   local batched_line_idxs = {}
   local sent_lens = {}
   local lineIdx = 0
-  local parallel_features = 8
+  -- TODO: delete this hard coded stuff
+  local parallel_features = 7
   local features_count = parallel_features
 
   local keep_features_size = nil

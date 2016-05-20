@@ -13,6 +13,7 @@
   - data/conll2003/eng.train.
 2. Запустить скрипт `bash utils/prepare-senna-data.sh`. Он скачивает [senna embeddings](http://ml.nec-labs.com/senna/download.html),
 газетиры и кладет их в папку data/.
+3. Установить torch и зависимости для Питона из файла requirements.txt (`pip install -r requirements.txt`).
 
 # Эксперименты
 
