@@ -11,7 +11,7 @@
   - data/conll2003/eng.testa.dev;
   - data/conll2003/eng.testb.test;
   - data/conll2003/eng.train.
-2. Запустить скрипт `bash prepare-senna-data.sh`. Он скачивает [senna embeddings](http://ml.nec-labs.com/senna/download.html),
+2. Запустить скрипт `bash utils/prepare-senna-data.sh`. Он скачивает [senna embeddings](http://ml.nec-labs.com/senna/download.html),
 газетиры и кладет их в папку data/.
 
 # Эксперименты
