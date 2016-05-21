@@ -24,6 +24,15 @@
   обучится модель с F1 в районе 87.5%.
   В папку snapshots сохраняется модель с лучшей F1 мерой каждые 2 эпохи.
   В ней же можно посмотреть логи обучения.
+  Результаты к 74 эпохе на тестовой выборке:
+  ```
+  processed 46666 tokens with 5648 phrases; found: 5778 phrases; correct: 4990.
+  accuracy:  97.65%; precision:  86.36%; recall:  88.35%; FB1:  87.34
+                LOC: precision:  90.35%; recall:  90.89%; FB1:  90.62  1678
+               MISC: precision:  73.82%; recall:  75.50%; FB1:  74.65  718
+                ORG: precision:  80.69%; recall:  85.01%; FB1:  82.79  1750
+                PER: precision:  93.87%; recall:  94.74%; FB1:  94.31  1632
+  ```
 
 # Ссылки
 
