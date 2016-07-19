@@ -1,30 +1,31 @@
-# Окружение
+# Environment
 
 * Python 2.7.11
 * [torch](http://torch.ch/docs/getting-started.html)
-* Корпус [CoNLL-2003](http://www.cnts.ua.ac.be/conll2003/ner/)
+* [CoNLL-2003](http://www.cnts.ua.ac.be/conll2003/ner/) corpora
 
-# Подготовка
+# Preparation
 
-1. Положить корпуса CoNLL-2003 в папку data/conll2003.
-В результате должно быть так:
+1. Put CoNLL-2003 corpora into data/conll2003 folder.
+Result look like this:
   - data/conll2003/eng.testa.dev;
   - data/conll2003/eng.testb.test;
   - data/conll2003/eng.train.
-2. Запустить скрипт `bash utils/prepare-senna-data.sh`. Он скачивает [senna embeddings](http://ml.nec-labs.com/senna/download.html),
-газетиры и кладет их в папку data/.
-3. Установить torch и зависимости для Питона из файла requirements.txt (`pip install -r requirements.txt`).
+2. Run script `bash utils/prepare-senna-data.sh`. It downloads [senna embeddings](http://ml.nec-labs.com/senna/download.html),
+gazeteers and puts them into data/.
+3. Install [torch](http://torch.ch/docs/getting-started.html) and python libs from requirements.txt (`pip install -r requirements.txt`).
 
-# Эксперименты
+# Experiments
 
-Все эксперименты проводились на AWS g2.2xlarge с использование GPU.
+All experiments are done by using AWS g2.2xlarge with GPU.
 
 1.
-  Запустить скрипт `bash experiments/convolution-net.sh`. По прошествию примерно 5 часов
-  обучится модель с F1 в районе 87.5%.
-  В папку snapshots сохраняется модель с лучшей F1 мерой каждые 2 эпохи.
-  В ней же можно посмотреть логи обучения.
-  Результаты к 74 эпохе на тестовой выборке:
+  Run `bash experiments/convolution-net.sh`. After about 5 hours
+  model with 87.5% F1 will be learnt.
+  In snapshots directory will be saved the model with the best F1 (each 2 epochs).
+  Learning logs also saving there.
+  
+  For example, learning log for 74 epoch:
   ```
   processed 46666 tokens with 5648 phrases; found: 5778 phrases; correct: 4990.
   accuracy:  97.65%; precision:  86.36%; recall:  88.35%; FB1:  87.34
@@ -34,8 +35,9 @@
                 PER: precision:  93.87%; recall:  94.74%; FB1:  94.31  1632
   ```
 
-# Ссылки
+# References
 
+- [Named entity recognition using syntactic and semantic features and neural networks](http://www.dialog-21.ru/media/3475/yusupov.pdf)
 - [Natural Language Processing (almost) from Scratch](https://arxiv.org/abs/1103.0398)
 - http://ml.nec-labs.com/senna/
 - https://github.com/patverga/torch-ner-nlp-from-scratch
