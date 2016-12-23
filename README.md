@@ -7,7 +7,7 @@
 # Preparation
 
 1. Put CoNLL-2003 corpora into data/conll2003 folder.
-Result look like this:
+Your CoNLL 2003 files should be renamed and placed as below:
   - data/conll2003/eng.testa.dev;
   - data/conll2003/eng.testb.test;
   - data/conll2003/eng.train.
